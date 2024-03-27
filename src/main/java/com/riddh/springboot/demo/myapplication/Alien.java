@@ -8,34 +8,32 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @Entity
 public class Alien {
 	@Id
-	private int id;
-	private String name;
-	private String points;
-
-	public String getPoints() {
-		return points;
+	private int aid;
+	private String aname;
+	private int points;
+	public int getId() {
+		return aid;
 	}
-	public void setPoints(String points) {
-		this.points = points;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(int aid) {
+		this.aid = aid;
 	}
 	public String getName() {
-		return name;
+		return aname;
 	}
-	public int getId() {
-		return id;
+	public void setName(String aname) {
+		this.aname = aname;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public int getPoints() {
+		return points;
 	}
-
+	public void setPoints(int points) {
+		this.points = points;
+	}
 	@Override
 	public String toString() {
 		return "Alien{" +
-				"id=" + id +
-				", name='" + name + '\'' +
+				"id=" + aid +
+				", name='" + aname + '\'' +
 				", points='" + points + '\'' +
 				'}';
 	}
